@@ -1,0 +1,33 @@
+# 打鱼助手 Python 依赖
+# 实测环境：Python 3.12 + PostgreSQL 14 + Redis 7
+#   conda create -n coc_chat python=3.12 -y
+#   conda activate coc_chat
+#   pip install -r requirements.txt
+#
+# 单机打鱼（src/hit_fish.py）只用到「设备控制 + 图像识别」两组；
+# 服务端（src/api/app.py）还需要 Web / 数据库 / 定时任务三组。
+
+# --- 云手机控制 + 图像识别（单机打鱼必需） ---
+uiautomator2==3.5.2
+adbutils==2.12.0
+opencv-python==4.11.0.86
+numpy==2.5.1
+pillow==12.1.0
+Levenshtein==0.27.3
+
+# --- Web 服务 ---
+Flask==3.1.3
+flask-cors==6.0.5
+gevent==26.5.0
+pydantic==2.13.4
+captcha==0.7.1
+PyJWT==2.13.0
+bcrypt==5.0.0
+
+# --- 数据库 / 缓存 ---
+SQLAlchemy==2.0.50
+psycopg2-binary==2.9.12
+redis==8.0.0
+
+# --- 定时任务 ---
+APScheduler==3.11.3

@@ -1,0 +1,38 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 虚拟环境
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志文件
+log_files/
+*.log
+
+# 数据库
+*.db
+*.sqlite3
+
+# 其他
+.DS_Store
+*.pyc
+
+# 本地配置与密钥
+.env
+!.env.example
+*.pem
+*.key
+*.crt
